@@ -147,6 +147,8 @@
     "@types/webpack": "^2.2.5",
     "@types/webpack-dev-middleware": "^1.9.1",
     "@types/webpack-hot-middleware": "^2.15.0",
+    "@types/webpack-merge": "^0.0.4",
+    "@types/webpack-validator": "^2.2.4",
     "electron-debug": "^1.1.0",
     "font-awesome": "^4.7.0",
     "react": "^15.4.2",

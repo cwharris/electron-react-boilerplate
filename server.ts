@@ -9,7 +9,9 @@ import * as webpackDevMiddleware from 'webpack-dev-middleware';
 import * as webpackHotMiddleware from 'webpack-hot-middleware';
 import { spawn } from 'child_process';
 
-import * as config from './webpack.config.development';
+import config from './webpack.config.development';
+
+console.log(config);
 
 const argv = require('minimist')(process.argv.slice(2));
 

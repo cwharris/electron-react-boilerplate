@@ -3,10 +3,10 @@
  * https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
  */
 
-import webpack from 'webpack';
-import validate from 'webpack-validator';
-import merge from 'webpack-merge';
-import baseConfig from './webpack.config.base';
+import * as webpack from 'webpack';
+import validate = require('webpack-validator');
+import * as merge from 'webpack-merge';
+import * as baseConfig from './webpack.config.base';
 
 const port = process.env.PORT || 3000;
 

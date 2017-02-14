@@ -88,6 +88,18 @@
     "@types/connect" "*"
     "@types/webpack" "*"
 
+"@types/webpack-merge@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@types/webpack-merge/-/webpack-merge-0.0.4.tgz#7150eaa758591905fbbb157f88ea15cae35d1b6c"
+  dependencies:
+    "@types/webpack" "*"
+
+"@types/webpack-validator@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@types/webpack-validator/-/webpack-validator-2.2.4.tgz#951c9ef3cafa0737a1dfff749276fce67a26e1a8"
+  dependencies:
+    "@types/webpack" "*"
+
 "@types/webpack@*", "@types/webpack@^2.2.5":
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-2.2.5.tgz#fdd98f969ba5da0d548c2a3c05a1975c9107cc05"
@@ -5888,15 +5900,15 @@ source-map-resolve@^0.3.0:
     source-map-url "~0.3.0"
     urix "~0.1.0"
 
-source-map-support@^0.4.0, source-map-support@^0.4.11:
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.11.tgz#647f939978b38535909530885303daf23279f322"
+source-map-support@^0.4.0, source-map-support@^0.4.10, source-map-support@^0.4.2:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.10.tgz#d7b19038040a14c0837a18e630a196453952b378"
   dependencies:
     source-map "^0.5.3"
 
-source-map-support@^0.4.10, source-map-support@^0.4.2:
-  version "0.4.10"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.10.tgz#d7b19038040a14c0837a18e630a196453952b378"
+source-map-support@^0.4.11:
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.11.tgz#647f939978b38535909530885303daf23279f322"
   dependencies:
     source-map "^0.5.3"
 
