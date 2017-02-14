@@ -54,13 +54,11 @@ $ npm run dev
 ## Editor Configuration
 **Atom**
 ```bash
-apm install editorconfig es6-javascript atom-ternjs javascript-snippets linter linter-eslint language-babel autocomplete-modules file-icons
+apm install editorconfig es6-javascript atom-ternjs javascript-snippets language-babel autocomplete-modules file-icons
 ```
 
 **Sublime**
 * [Editorconfig Integration](https://github.com/sindresorhus/editorconfig-sublime#readme)
-* [Linting](https://github.com/SublimeLinter/SublimeLinter3)
-* [ESLint Integration](https://github.com/roadhump/SublimeLinter-eslint)
 * [Syntax Highlighting](https://github.com/babel/babel-sublime)
 * [Autocompletion](https://github.com/ternjs/tern_for_sublime)
 * [Node Snippets](https://packagecontrol.io/packages/JavaScript%20%26%20NodeJS%20Snippets)
@@ -68,7 +66,6 @@ apm install editorconfig es6-javascript atom-ternjs javascript-snippets linter l
 
 **Others**
 * [Editorconfig](http://editorconfig.org/#download)
-* [ESLint](http://eslint.org/docs/user-guide/integrations#editors)
 * Babel Syntax Plugin
 
 ## DevTools
@@ -166,7 +163,7 @@ See [electron-builder CLI Usage](https://github.com/electron-userland/electron-b
 This boilerplate uses a [two package.json structure](https://github.com/electron-userland/electron-builder/wiki/Two-package.json-Structure).
 
 1. If the module is native to a platform or otherwise should be included with the published package (i.e. bcrypt, openbci), it should be listed under `dependencies` in `./app/package.json`.
-2. If a module is `import`ed by another module, include it in `dependencies` in `./package.json`.   See [this ESLint rule](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md).
+2. If a module is `import`ed by another module, include it in `dependencies` in `./package.json`.
 3. Otherwise, modules used for building, testing and debugging should be included in `devDependencies` in `./package.json`.
 
 ## Native-like UI
