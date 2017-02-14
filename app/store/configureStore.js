@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV === 'production') {
-  module.exports = require('./configureStore.production');
+  exports.default = require('./configureStore.production');
 } else {
-  module.exports = require('./configureStore.development');
+  exports.default = require('./configureStore.development');
 }

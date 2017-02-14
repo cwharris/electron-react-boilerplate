@@ -1,12 +1,16 @@
 {
     "compilerOptions": {
+        "sourceMap": true,
+        "allowJs": true,
+        "jsx": "react",
         "module": "commonjs",
         "moduleResolution": "node",
-        "allowJs": true,
         "noImplicitAny": true
     },
     "files": [
-        "server.ts"
+        "server.ts",
+        "app/index.tsx",
+        "app/main.development.ts"
     ],
     "exclude": [
         "node_modules"

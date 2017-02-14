@@ -1,13 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, hashHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
-import routes from './routes';
 import configureStore from './store/configureStore';
+import * as routes from './routes';
 import './app.global.css';
 
-const store = configureStore();
+const store = (configureStore as any)();
 const history = syncHistoryWithStore(hashHistory, store);
 
 render(
