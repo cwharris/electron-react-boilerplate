@@ -14,7 +14,7 @@ const BabiliPlugin = require('babili-webpack-plugin');
 export default merge(baseConfig, {
   devtool: 'cheap-module-source-map',
 
-  entry: ['babel-polyfill', './app/index'],
+  entry: ['./app/index'],
 
   output: {
     path: path.join(__dirname, 'app/dist'),
