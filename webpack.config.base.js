@@ -34,8 +34,7 @@ export default validate({
    * Determine the array of extensions that should be used to resolve modules.
    */
   resolve: {
-    extensions: ['', '.ts', '.tsx', '.js', '.jsx', '.json'],
-    packageMains: ['webpack', 'browser', 'web', 'browserify', ['jam', 'main'], 'main']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
 
   plugins: [],
