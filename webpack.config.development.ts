@@ -4,13 +4,12 @@
  */
 
 import * as webpack from 'webpack';
-import validate = require('webpack-validator');
 import * as merge from 'webpack-merge';
-import * as baseConfig from './webpack.config.base';
+import baseConfig from './webpack.config.base';
 
 const port = process.env.PORT || 3000;
 
-export default validate(merge(baseConfig, {
+export default merge(baseConfig, {
   devtool: 'inline-source-map',
 
   entry: [
@@ -52,7 +51,7 @@ export default validate(merge(baseConfig, {
   plugins: [
     // https://webpack.github.io/docs/hot-module-replacement-with-webpack.html
     new webpack.HotModuleReplacementPlugin(),
-    
+
     new webpack.NoEmitOnErrorsPlugin(),
 
     /**
@@ -73,4 +72,4 @@ export default validate(merge(baseConfig, {
    * https://github.com/chentsulin/webpack-target-electron-renderer#how-this-module-works
    */
   target: 'electron-renderer'
-}));
+});

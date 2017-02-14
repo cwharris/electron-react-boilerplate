@@ -2,9 +2,9 @@
  * Base webpack config used across other specific configs
  */
 
-import path from 'path';
-import validate from 'webpack-validator';
-import { dependencies as externals } from './app/package.json';
+import * as path from 'path';
+import validate = require('webpack-validator');
+const { dependencies, externals } = require('./app/package.json');
 
 export default validate({
   module: {
