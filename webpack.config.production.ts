@@ -76,13 +76,7 @@ export default merge(baseConfig, {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
 
-    /**
-     * Babli is an ES6+ aware minifier based on the Babel toolchain (beta)
-     */
-    new BabiliPlugin({
-      // Disable deadcode until https://github.com/babel/babili/issues/385 fixed
-      deadcode: false,
-    }),
+		new webpack.optimize.UglifyJsPlugin(),
 
     new ExtractTextPlugin({
 			filename: "style.css",
