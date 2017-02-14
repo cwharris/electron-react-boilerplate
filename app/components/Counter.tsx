@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { Link } from 'react-router';
-import styles from './Counter.css';
+import * as styles from './Counter.css';
 
-class Counter extends Component {
+export interface Props {
+    increment: () => void,
+    incrementIfOdd: () => void,
+    incrementAsync: () => void,
+    decrement: () => void,
+    counter: number
+}
 
-  // props: {
-  //   increment: () => void,
-  //   incrementIfOdd: () => void,
-  //   incrementAsync: () => void,
-  //   decrement: () => void,
-  //   counter: number
-  // };
-
+export class Counter extends React.Component<Props, void> {
   render() {
     const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
     return (
@@ -38,5 +37,3 @@ class Counter extends Component {
     );
   }
 }
-
-export default Counter;

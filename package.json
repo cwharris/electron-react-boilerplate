@@ -5,19 +5,18 @@
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "main": "main.js",
   "scripts": {
-    "hot-server": "cross-env NODE_ENV=development ts-node --max_old_space_size=2096 -r babel-register server.ts",
+    "hot-server": "cross-env NODE_ENV=development node -r ts-node/register --max_old_space_size=2096 server.ts",
     "build-main": "cross-env NODE_ENV=production webpack --config webpack.config.electron.ts --progress --profile --colors",
     "build-renderer": "cross-env NODE_ENV=production webpack --config webpack.config.production.ts --progress --profile --colors",
     "build": "npm run build-main && npm run build-renderer",
     "start": "cross-env NODE_ENV=production electron ./app/",
-    "start-hot": "cross-env HOT=1 NODE_ENV=development electron -r babel-register -r babel-polyfill ./app/main.development",
+    "start-hot": "cross-env HOT=1 NODE_ENV=development electron -r ts-node/register ./app/main.development.ts",
     "postinstall": "concurrently \"install-app-deps\" \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\"",
-    "dev": "tsc ./app/main.development.ts && npm run hot-server -- --start-hot",
+    "dev": "npm run hot-server -- --start-hot",
     "package": "npm run build && build --publish never",
     "package-win": "npm run build && build --win --x64",
     "package-linux": "npm run build && build --linux",
-    "package-all": "npm run build && build -mwl",
-    "cleanup": "mop -v"
+    "package-all": "npm run build && build -mwl"
   },
   "browserslist": "electron 1.4",
   "build": {
@@ -60,9 +59,6 @@
   "directories": {
     "buildResources": "resources",
     "output": "release"
-  },
-  "bin": {
-    "electron": "./node_modules/.bin/electron"
   },
   "repository": {
     "type": "git",

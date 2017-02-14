@@ -3,10 +3,9 @@
  */
 
 import * as path from 'path';
-import validate = require('webpack-validator');
 const { dependencies, externals } = require('./app/package.json');
 
-export default validate({
+export default {
   module: {
     loaders: [{
       test: /\.tsx?$/,
@@ -40,4 +39,4 @@ export default validate({
   plugins: [],
 
   externals: Object.keys(externals || {})
-});
+};

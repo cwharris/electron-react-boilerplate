@@ -18,9 +18,10 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
+  if (process.platform !== 'darwin') {
+		app.quit();
+	}
 });
-
 
 const installExtensions = async () => {
   if (process.env.NODE_ENV === 'development') {
@@ -46,9 +47,8 @@ app.on('ready', async () => {
   await installExtensions();
 
   mainWindow = new BrowserWindow({
-    show: false,
-    width: 1024,
-    height: 728
+    width: 1900,
+    height: 1000
   });
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
@@ -63,7 +63,9 @@ app.on('ready', async () => {
   });
 
   if (process.env.NODE_ENV === 'development') {
-    mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools({
+			mode: "bottom"
+		});
     mainWindow.webContents.on('context-menu', (e, props) => {
       const { x, y } = props;
 

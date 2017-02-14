@@ -9,8 +9,8 @@
     },
     "files": [
         "server.ts",
-        "app/index.tsx",
-        "app/main.development.ts"
+        "app/main.development.ts",
+        "app/index.tsx"
     ],
     "exclude": [
         "node_modules"

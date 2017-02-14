@@ -11,9 +11,9 @@ import { spawn } from 'child_process';
 
 import config from './webpack.config.development';
 
-console.log(config);
-
 const argv = require('minimist')(process.argv.slice(2));
+
+console.log(argv);
 
 const app = express();
 const compiler = webpack(config);
@@ -36,6 +36,9 @@ const server = app.listen(PORT, 'localhost', (serverError: any) => {
   }
 
   if (argv['start-hot']) {
+
+		console.log('doing that start hot thing');
+
     spawn('npm', ['run', 'start-hot'], { shell: true, env: process.env, stdio: 'inherit' })
       .on('close', code => process.exit(code))
       .on('error', spawnError => console.error(spawnError));
