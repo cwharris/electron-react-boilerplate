@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "noImplicitAny": true
+    },
+    "files": [
+        "server.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
